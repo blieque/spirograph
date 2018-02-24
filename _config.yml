@@ -1,0 +1,6 @@
+name: "Spirograph"
+
+repository: "blieque/spirograph"
+destination: "dist"
+
+exclude: [ 'README.md', 'LICENSE.md', 'Gemfile.lock', 'Gemfile' ]

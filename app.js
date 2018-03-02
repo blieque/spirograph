@@ -59,7 +59,7 @@ const toggleDrawing = function toggleDrawing(state) {
   if (allowDrawing) {
     requestAnimationFrame(drawSegment);
   }
-  elPause.style.display = allowDrawing ? 'none' : 'block';
+  elPauseIndicator.style.display = allowDrawing ? 'none' : 'block';
 };
 
 const clickHandler = function clickHandler(event) {
@@ -113,7 +113,12 @@ const generate = function generate() {
 const elCanvas = document.querySelector('canvas');
 const ctx = elCanvas.getContext('2d');
 
-const elPause = document.querySelector('div');
+const elPauseIndicator = document.querySelector('.pause-indicator');
+const elTutorial = document.querySelector('.tutorial');
+
+setTimeout(() => {
+  elTutorial.parentElement.removeChild(elTutorial);
+}, 2000);
 
 const dimension =
   window.devicePixelRatio * Math.min(window.innerWidth, window.innerHeight);

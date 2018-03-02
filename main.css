@@ -10,7 +10,31 @@ body {
   position: relative;
 }
 
-div {
+.tutorial {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(34, 34, 34, 0.8);
+  pointer-events: none;
+}
+.tutorial__half {
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  font-size: 18pt;
+  text-align: center;
+  text-decoration: underline;
+  line-height: 100vh;
+  user-select: none;
+}
+.tutorial__half:not(:last-child) {
+  box-shadow: inset -1px 0 0 0 #fff;
+}
+
+.pause-indicator {
   display: none;
   position: absolute;
   top: 32px;
